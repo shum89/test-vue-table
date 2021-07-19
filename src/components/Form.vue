@@ -4,7 +4,7 @@
       <TextInput name="firstName" label="Имя" />
       <TextInput name="lastName" label="Фамилия" />
       <TextInput @keypress="keypress" name="age" type="number" label="Возраст" />
-      <CustomButton text="Добавить" type="submit" />
+      <CustomButton text="Добавить" :size="`medium`" type="submit" />
     </fieldset>
   </Form>
 </template>
@@ -45,12 +45,23 @@ export default {
 <style scoped>
 .form {
   display: flex;
-  width: 100%;
+  width: 90%;
+  justify-content: center;
 }
 .form__fieldset {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1.5fr) minmax(30px, 170px);
+  width: 100%;
+  gap: 40px;
+  align-items: end;
+  justify-items: center;
+}
+@media screen and (max-width: 768px) {
+  .form__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
 }
 </style>

@@ -42,6 +42,14 @@ export default {
 <script></script>
 
 <style>
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   --base: #090e10;
   --base1: #ebeff3;
@@ -84,20 +92,8 @@ input:-webkit-autofill:active {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  box-sizing: border-box;
-}
-.table__row-group {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-.table__row {
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  max-width: 500px;
-  width: 100%;
+  align-items: center;
 }
 </style>

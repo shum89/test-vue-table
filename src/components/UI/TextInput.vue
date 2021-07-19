@@ -81,10 +81,10 @@ export default {
   box-sizing: border-box;
   gap: 10px;
   color: var(--base3);
-  flex: 1;
   max-width: 250px;
   text-align: left;
   position: relative;
+  width: 100%;
 }
 .input__label-text_error {
   color: var(--error);

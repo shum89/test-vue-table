@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :type="type">
+  <button class="button" :class="`button_${size}`" :type="type">
     <slot>{{ text }}</slot>
   </button>
 </template>
@@ -12,6 +12,10 @@ export default {
       type: String,
       default: '',
     },
+    size: {
+      type: String,
+      default: 'medium',
+    },
     type: {
       type: String,
       default: 'button',
@@ -23,11 +27,9 @@ export default {
 <style scoped>
 .button {
   border-radius: 10px;
+  display: grid;
+  place-items: center;
   padding: 10px 15px;
-  max-width: 250px;
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 900;
   text-transform: uppercase;
   transition: var(--shadow-transition);
   width: fit-content;
@@ -45,5 +47,14 @@ export default {
 .button:focus {
   outline: none;
   border-color: var(--base3);
+}
+.button_medium {
+  max-width: 350px;
+}
+.button_small {
+  padding: 7px 7px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 900;
 }
 </style>

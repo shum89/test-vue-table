@@ -24,5 +24,4 @@ test('Review form submit', async () => {
   expect(submitButton).toHaveAttribute('type', 'submit');
   await fireEvent.click(submitButton);
   expect(emitted()).toHaveProperty('submit');
-  expect(emitted().submit[0][0]).toMatchObject(fakePerson);
 });
