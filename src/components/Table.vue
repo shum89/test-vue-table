@@ -80,13 +80,13 @@ export default {
 }
 .table__cell {
   padding: 15px;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .table__cell_row:last-of-type {
   justify-self: flex-end;
   padding: 7px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .table__row-text {
   margin: 0;
