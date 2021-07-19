@@ -1,29 +1,30 @@
 # table-test
 
-## Project setup
+## Ссылка на проект
+
+<https://shum89.github.io/test-vue-table/>
+
+### Установите зависимости
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Запустить в режиме хот-релоад
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Запуск тестов
 
-### Run your unit tests
 ```
 yarn test:unit
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+### TODO
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Написать тесты
+2. Добавить попап с подтверждением удаления строки
+3. Пагинация, выбор количества строк
+4. сохранять состояние таблицы в localstorage
