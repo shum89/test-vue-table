@@ -16,8 +16,8 @@ test('Review form submit', async () => {
   const lastNameInput = getByLabelText('Фамилия');
   const ageInput = getByLabelText('Возраст');
 
-  await fireEvent.update(firstNameInput, fakePerson.lastName);
-  await fireEvent.update(lastNameInput, fakePerson.firstName);
+  await fireEvent.update(firstNameInput, fakePerson.firstName);
+  await fireEvent.update(lastNameInput, fakePerson.lastName);
   await fireEvent.update(ageInput, fakePerson.age);
 
   expect(submitButton).toBeEnabled();
